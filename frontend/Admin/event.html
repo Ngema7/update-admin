@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events & marque</title>
+    <link rel="stylesheet" href="admin all css/dashboard.css" />
+    <link rel="stylesheet" href="admin all css/sidebar.css" />
+    <link rel="stylesheet" href="admin all css/event.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="admin imgs/image copy.png" alt="logo" />
+            <h2>ABC School</h2>
+          </div>
+
+          <i class="fa fa-times" id="closeBtn"></i>
+        </div>
+
+        <ul class="menu">
+          <li class="active">
+            <i class="fa fa-home"></i><span>Dashboard</span>
+          </li>
+          <li><i class="fa fa-calendar"></i><span>Events & marquee</span></li>
+          <li><i class="fa fa-image"></i><span>Gallery</span></li>
+          <li><i class="fa fa-chalkboard-teacher"></i><span>Teachers</span></li>
+          <li><i class="fa fa-envelope"></i><span>Messages</span></li>
+          <li><i class="fa fa-gear"></i><span>Settings</span></li>
+        </ul>
+
+        <div class="logout">
+          <i class="fa fa-sign-out-alt"></i><span>Logout</span>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <div class="main">
+        <div class="topbar">
+          <div class="dash">
+            <i class="fa fa-bars" id="toggleBtn"></i>
+            <h2>Events & marquee</h2>
+          </div>
+
+          <div class="admin">
+            <img src="admin imgs/image copy.png" alt="profile" />
+            <h2>Admin</h2>
+          </div>
+        </div>
+
+
+
+<section class="admin-grid">
+
+  <!-- MARQUEE -->
+  <div class="admin-card">
+    <div class="card-header">
+      <h3>📢 Manage Marquee / Notices</h3>
+      <span class="tag">Live Updates</span>
+    </div>
+    <div class="form-group">
+      <input id="marqueeText" type="text" placeholder="Enter notice / marquee text..." />
+      <button class="admin-btn" onclick="updateMarquee()">✅ Update Marquee</button>
+    </div>
+    <div id="liveMarquee">Your marquee will appear here...</div>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="admin-card">
+    <div class="card-header">
+      <h3>📅 Manage Events</h3>
+      <span class="tag blue">School Events</span>
+    </div>
+    <div class="form-group">
+      <input id="eventTitle" type="text" placeholder="Event title" />
+      <input id="eventDate" type="date" />
+      <input id="eventTime" type="time" />
+      <button class="admin-btn" onclick="addEvent()">➕ Add Event</button>
+    </div>
+    <div id="eventContainer"></div>
+  </div>
+
+</section>
+
+      
+        
+  
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
